@@ -1,0 +1,1 @@
+"""SafeReport Map AI package."""
