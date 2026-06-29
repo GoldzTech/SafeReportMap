@@ -27,6 +27,9 @@ from backend.app.repositories.export_repository import ExportRepository
 
 router = APIRouter(prefix="/admin", tags=["admin"])
 
+@router.get("/health")
+def health_check():
+    return {"status": "healthy"}
 
 @router.get("/dashboard/metrics", response_model=DashboardMetrics)
 def dashboard_metrics(current_user=Depends(get_current_active_admin_user), db: Session = Depends(get_db)):
