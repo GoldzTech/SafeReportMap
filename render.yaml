@@ -10,9 +10,10 @@ services:
       pip install -r requirements/requirements.txt
 
     startCommand: |
-      cd backend
+      cd backend && \
+      PYTHONPATH=.. alembic upgrade head && \
       PYTHONPATH=.. uvicorn backend.app.main:app --host 0.0.0.0 --port $PORT
-
+      
     healthCheckPath: /health
 
     envVars:
