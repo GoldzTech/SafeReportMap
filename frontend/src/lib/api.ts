@@ -12,7 +12,7 @@ import type {
 // import.meta.env typing can vary between environments; cast to any to safely read values
 const _meta: any = import.meta;
 const rawBaseUrl = _meta?.env?.local?.VITE_API_BASE_URL ?? _meta?.env?.VITE_API_BASE_URL;
-const API_BASE_URL = rawBaseUrl?.replace(/\/$/, '') || 'http://127.0.0.1:8000';
+const API_BASE_URL = rawBaseUrl;
 
 const AUTH_SESSION_KEY = 'safereport_auth_session';
 

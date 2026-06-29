@@ -4,9 +4,9 @@ import { Paperclip, Send, ShieldCheck, Sparkles } from 'lucide-react';
 const MAX_CHARS = 4000;
 
 async function submitAnonymousReport(payload) {
-  const baseUrl = import.meta.env.VITE_API_BASE_URL?.replace(/\/$/, '') || 'http://127.0.0.1:8000';
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
-  const response = await fetch(`${baseUrl}/api/v1/reports`, {
+  const response = await fetch(`${API_BASE_URL}/api/v1/reports`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

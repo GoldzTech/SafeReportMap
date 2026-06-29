@@ -40,7 +40,7 @@ import {
   getStoredAccessToken,
 } from './lib/api';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL?.replace(/\/$/, '') || 'http://127.0.0.1:8000';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 const statusStyleMap = {
   RECEIVED: 'bg-sky-500/15 text-sky-200 ring-1 ring-sky-500/30',
   IN_REVIEW: 'bg-amber-500/15 text-amber-200 ring-1 ring-amber-500/30',
