@@ -9,9 +9,11 @@ import type {
   AdminReportDetail,
 } from './types';
 
+
+
 // import.meta.env typing can vary between environments; cast to any to safely read values
 const _meta: any = import.meta;
-const API_BASE_URL = (_meta.env as any).VITE_API_BASE_URL;
+const API_BASE_URL = 'https://safereportmap-backend.onrender.com';
 console.log("API_BASE_URL =", API_BASE_URL);
 
 const AUTH_SESSION_KEY = 'safereport_auth_session';
