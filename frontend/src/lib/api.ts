@@ -11,8 +11,7 @@ import type {
 
 // import.meta.env typing can vary between environments; cast to any to safely read values
 const _meta: any = import.meta;
-const rawBaseUrl = _meta?.env?.VITE_API_BASE_URL ?? _meta?.env?.VITE_API_BASE_URL;
-const API_BASE_URL = rawBaseUrl;
+const API_BASE_URL = (_meta.env as any).VITE_API_BASE_URL;
 console.log("API_BASE_URL =", API_BASE_URL);
 
 const AUTH_SESSION_KEY = 'safereport_auth_session';
