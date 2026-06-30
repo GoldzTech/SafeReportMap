@@ -13,6 +13,7 @@ import type {
 const _meta: any = import.meta;
 const rawBaseUrl = _meta?.env?.VITE_API_BASE_URL ?? _meta?.env?.VITE_API_BASE_URL;
 const API_BASE_URL = rawBaseUrl;
+console.log("API_BASE_URL =", API_BASE_URL);
 
 const AUTH_SESSION_KEY = 'safereport_auth_session';
 
